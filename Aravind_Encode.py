@@ -6,7 +6,12 @@ def encode(password):
         digit = int(char) + 3     # changing each character to an integer to add 3 to it
         encoded_password += str(digit)      # changing back to a string to compile into encoded password
     return encoded_password
-
+def decoder(encoded_password):
+    decoded_password = ""
+    for i in encoded_password:
+        decoded_digit = str((int(i) - 3) % 10)
+        decoded_password += decoded_digit
+    return decoded_password
 
 def main():
 
