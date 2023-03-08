@@ -3,8 +3,8 @@
 def encode(password):
     encoded_password = ''
     for char in password:
-        digit = int(char) + 3
-        encoded_password += str(digit)
+        digit = int(char) + 3     # changing each character to an integer to add 3 to it
+        encoded_password += str(digit)      # changing back to a string to compile into encoded password
     return encoded_password
 
 
@@ -17,7 +17,7 @@ while menu:
         if menu_option == 1:
             password = input('Enter password for encoding: ')
             print()
-            print(f'Encoded password is: {encode(password)}')
+            print(f'Your encoded password is: {encode(password)}')
             print()
 
 
