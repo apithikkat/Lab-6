@@ -1,4 +1,4 @@
-
+# Aravind Ithikkat
 
 def encode(password):
     encoded_password = ''
@@ -8,16 +8,25 @@ def encode(password):
     return encoded_password
 
 
+def main():
 
-menu = True
+    menu = True
 
-while menu:
-        menu_option = int(input('Enter 1 for password encoding\n\nEnter 2 for password decoding\n'))
+    while menu:
+            menu_option = int(input('Enter 1 for password encoding\n\nEnter 2 for password decoding\n'))
 
-        if menu_option == 1:
-            password = input('Enter password for encoding: ')
-            print()
-            print(f'Your encoded password is: {encode(password)}')
-            print()
+            if menu_option == 1:
+                password = input('Enter password for encoding: ')
+                Encoded_password = encode(password)
+
+            if menu_option == 2:
+                Decoded_password = None
+
+            if menu_option == 3:
+                break
+
+
+if __name__ == '_main_':
+    main()
 
 
