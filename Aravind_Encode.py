@@ -19,19 +19,28 @@ def main():
     menu = True
 
     while menu:
-            menu_option = int(input('Enter 1 for password encoding\n\nEnter 2 for password decoding\n'))
+        print()
 
-            if menu_option == 1:
-                password = input('Enter password for encoding: ')
-                Encoded_password = encode(password)
+        print('Menu')
+        print('-------------')
+        print('1. Encode')
+        print('2. Decode')
+        print('3. Quit')
+        print()
+        menu_option = int(input('Please enter an option: '))
 
-            if menu_option == 2:
-                Decoded_password = decoder(encoded_password)
-                print()
-                print(f'Your decoded password is: {Decoded_password}')
+        if menu_option == 1:
+            password = input('Please enter your password to encode: ')
+            Encoded_password = encode(password)
+            print('Your password has been encoded and stored!')
 
-            if menu_option == 3:
-                break
+        if menu_option == 2:
+            Decoded_password = decoder(encoded_password)
+            print()
+            print(f'The encoded password is {Encoded_password}, and the original password is {Decoded_password}.')
+
+        if menu_option == 3:
+            break
 
 
 if __name__ == '_main_':
