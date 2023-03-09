@@ -6,6 +6,7 @@ def encode(password):
         digit = int(char) + 3     # changing each character to an integer to add 3 to it
         encoded_password += str(digit)      # changing back to a string to compile into encoded password
     return encoded_password
+
 def decoder(encoded_password):
     decoded_password = ""
     for i in encoded_password:
@@ -25,7 +26,9 @@ def main():
                 Encoded_password = encode(password)
 
             if menu_option == 2:
-                Decoded_password = None
+                Decoded_password = decoder(encoded_password)
+                print()
+                print(f'Your decoded password is: {Decoded_password}')
 
             if menu_option == 3:
                 break
